@@ -30,6 +30,7 @@ cd GBP_NOK
 ```
 
 ### 2️⃣ Create and Activate a Conda Environment
+**Info: the program was created to run on a GPU. To enable NVIDIA GPU to be used there is some script in forecast.py. The correct dependencies of cuDNN, CUDAtoolkit and TensorFlow as well as Python must be installed together for compatibility.**
 ```bash
 conda create --name tf_gpu python=3.9
 conda activate tf_gpu
@@ -50,7 +51,7 @@ This project fetches data from Yahoo Finance and Norges Bank. Some APIs may requ
 ```bash
 python data_fetcher.py
 ```
-This script downloads exchange rates, oil prices, FTSE index, and central bank rates, then merges and preprocesses them into `GBP_NOK_Input_data.csv`.
+This script downloads exchange rates, oil prices, FTSE index, and central bank rates, then merges and preprocesses them intotwo files: 'train_data.csv' & 'test_data.csv'.
 
 ### 6️⃣ Train & Forecast Using LSTM
 ```bash
